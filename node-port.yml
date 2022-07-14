@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deploy
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+      name: k8s-webapp
+  template:
+    metadata:
+      labels:
+        name: k8s-webapp
+    spec:
+      containers:
+      - name: webapp-ctr
+        image: mpolo303/ml:0.1
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-nodeport-svc
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      nodePort: 30080
+  type: NodePort
+  selector:
+    name: k8s-webapp

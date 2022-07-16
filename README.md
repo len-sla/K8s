@@ -8,10 +8,10 @@ K9s continually watches Kubernetes for changes and offers subsequent commands to
 
 [K9s](https://github.com/derailed/k9s)
  installing  with 
- 
- '''
+
+ ```
  curl -sS https://webinstall.dev/k9s | bash
- '''
+ ```
 
 
  ---

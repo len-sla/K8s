@@ -7,6 +7,11 @@ Too make it easier to navigate, observe and manage your deployed applications in
 K9s continually watches Kubernetes for changes and offers subsequent commands to interact with your observed resources.
 
 [K9s](https://github.com/derailed/k9s)
+ installing  with 
+ 
+ ---
+ curl -sS https://webinstall.dev/k9s | bash
+ ---
 
 
  ---

@@ -14,7 +14,7 @@ K9s continually watches Kubernetes for changes and offers subsequent commands to
  ```
 
 ![](k9s.JPG)
-![cAdvisor in action](cadvisor.gif)
+
  ---
 
  

@@ -13,7 +13,7 @@ K9s continually watches Kubernetes for changes and offers subsequent commands to
  curl -sS https://webinstall.dev/k9s | bash
  ```
 
-
+![what for is netshoot](netshoot.png)
  ---
 
  

@@ -24,7 +24,7 @@ K9s continually watches Kubernetes for changes and offers subsequent commands to
 
 
 
-## 2.  Collecting an d presenting logs in K8s environment.
+## 2.  Collecting and presenting logs in K8s environment( fluentd  installed as DeamonSet, Elasticsearch.
 
 Once in the cluster there are couple of applications like database,python aplications,  message broker crosschecking all of them especially in real time could a challenge simple kubectl describe pod etc will not be enough. It is even worse if the one of them is not working then logs are essetial for debugging.
 
@@ -55,8 +55,7 @@ You can actually very easily configure that routing in fluentd.
 You could  install fluentd in kubernetes as a DaemonSet
 DaemonSet is a component that runs on each kubernetes node. 
 
-You can configure fluenty using a fluentd configuration file.
-it's very powerful in terms of processing and reformatting your data
+You can configure fluenty using a fluentd configuration file. It's very powerful in terms of processing and reformatting your data
 fluentd has tons of plugins for different use cases
  you can define the data
 sources these are all the applications

@@ -51,7 +51,7 @@ data however in this case
 each application developer must add a
 library for elastic search and configure it to connect to elastic 
 
-3. third-party solution Fluentd does that reliably meaning
+3. third-party solution [Fluentd](https://github.com/fluent/fluentd) does that reliably meaning
 if there is a network outage or data spikes this shouldn't mess up data collection.
 It starts collecting logs from all the applications: it can be your own applications
 third-party applications. All of it now these logs that fluentd collected will be of different forms  like json format, nginx format some custom format, and so on so fluentd will process them and reformat them into a uniform way. After fluentd processes them, in most cases the goal is to nicely visualize  and analyse them.

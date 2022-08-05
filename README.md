@@ -29,7 +29,7 @@ K9s continually watches Kubernetes for changes and offers subsequent commands to
 Once in the cluster there are couple of applications like database,python aplications,  message broker crosschecking all of them especially in real time could a challenge simple kubectl describe pod etc will not be enough. It is even worse if the one of them is not working then logs are essetial for debugging.
 
 
-Now the question is how do application log this data?
+Now the question is how do application log this data?<b>
 There are few options:
 
 1. applications right to a file

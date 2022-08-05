@@ -60,8 +60,7 @@ Maybe  you want your python application logs to go to mongodb storage for data a
 You can actually very easily configure that routing in fluentd.
 
  ===
-You could  install fluentd in kubernetes as a DaemonSet
-DaemonSet is a component that runs on each kubernetes node. 
+You could  install fluentd in kubernetes as a DaemonSet(_DaemonSet is a component that runs on each kubernetes node_). 
 
 You can configure fluenty using a fluentd configuration file. It's very powerful in terms of processing and reformatting your data
 fluentd has tons of plugins for different use cases

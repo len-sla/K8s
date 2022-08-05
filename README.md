@@ -36,24 +36,26 @@ There are few options:
 however as you can imagine it's difficult to analyze
 loads of data in raw log files
 
-2. another option could be to log directly
+* another option could be to log directly
 into a log database like elastic for example
 to then have a visualization of this
 data however in this case
 each application developer must add a
 library for elastic search and configure it to connect to elastic 
 
-3. third-party solution [Fluentd](https://github.com/fluent/fluentd) does that reliably meaning
+* third-party solution [Fluentd](https://github.com/fluent/fluentd) does that reliably meaning
 if there is a network outage or data spikes this shouldn't mess up data collection.
 It starts collecting logs from all the applications: it can be your own applications
 third-party applications. All of it now these logs that fluentd collected will be of different forms  like json format, nginx format some custom format, and so on so fluentd will process them and reformat them into a uniform way. After fluentd processes them, in most cases the goal is to nicely visualize  and analyse them.
 ![](https://camo.githubusercontent.com/9386aa8e7cb67334bf3239e648abb3c034a521ba8cc48a34911645da5fd903d4/68747470733a2f2f7777772e666c75656e74642e6f72672f696d616765732f666c75656e74642d6172636869746563747572652e706e67)
 
-
-Fluentd can send these logs to any destination you want elasticsearch, mongodb, s3, kafka
-maybe  you want your python application logs to go to mongodb storage for data analysis and all other application logs to go to elasticsearch
+---
+ 
+Fluentd can send these logs to any destination you want elasticsearch, mongodb, s3, kafka.
+Maybe  you want your python application logs to go to mongodb storage for data analysis and all other application logs to go to elasticsearch.
 You can actually very easily configure that routing in fluentd.
 
+ ===
 You could  install fluentd in kubernetes as a DaemonSet
 DaemonSet is a component that runs on each kubernetes node. 
 

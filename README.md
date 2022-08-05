@@ -28,24 +28,34 @@ K9s continually watches Kubernetes for changes and offers subsequent commands to
 
 Once in the cluster there are couple of applications like database,python aplications,  message broker crosschecking all of them especially in real time could a challenge simple kubectl describe pod etc will not be enough. It is even worse if the one of them is not working then logs are essetial for debugging.
 
+### Libraries and useful links
+
+
+1. [Flair Embeddings](https://github.com/flairNLP/flair/blob/master/resources/docs/embeddings/FLAIR_EMBEDDINGS.md)
+2. [FastText Embeddings](https://github.com/flairNLP/flair/blob/master/resources/docs/embeddings/FASTTEXT_EMBEDDINGS.md)
+3. [TransformerWordEmbeddings](https://github.com/flairNLP/flair/blob/master/resources/docs/embeddings/TRANSFORMER_EMBEDDINGS.md)
+4. [How to use flair with keras](https://lekonard.github.io/blog/how-to-use-flair-with-keras/)
+
+
 Now the question is how do application log this data?
 There are few options:
 
-*applications right to a file
+1. applications right to a file
 however as you can imagine it's difficult to analyze
 loads of data in raw log files
 
-*another option could be to log directly
+2. another option could be to log directly
 into a log database like elastic for example
 to then have a visualization of this
 data however in this case
 each application developer must add a
 library for elastic search and configure it to connect to elastic 
 
-third-party solution Fluentd does that reliably meaning
+3. third-party solution Fluentd does that reliably meaning
 if there is a network outage or data spikes this shouldn't mess up data collection.
 It starts collecting logs from all the applications: it can be your own applications
 third-party applications. All of it now these logs that fluentd collected will be of different forms  like json format, nginx format some custom format, and so on so fluentd will process them and reformat them into a uniform way. After fluentd processes them, in most cases the goal is to nicely visualize  and analyse them.
+[Fluentd](https://camo.githubusercontent.com/9386aa8e7cb67334bf3239e648abb3c034a521ba8cc48a34911645da5fd903d4/68747470733a2f2f7777772e666c75656e74642e6f72672f696d616765732f666c75656e74642d6172636869746563747572652e706e67)
 
 
 Fluentd can send these logs to any destination you want elasticsearch, mongodb, s3, kafka

@@ -32,7 +32,7 @@ Once in the cluster there are couple of applications like database,python aplica
 Now the question is how do application log this data?<b>
 There are few options:
 
-1. applications right to a file
+* applications right to a file
 however as you can imagine it's difficult to analyze
 loads of data in raw log files
 

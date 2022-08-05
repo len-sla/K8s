@@ -30,6 +30,7 @@ Once in the cluster there are couple of applications like database,python aplica
 
 
 Now the question is how do application log this data?<b>
+<br/>
 There are few options:
 
 * applications right to a file
@@ -47,6 +48,9 @@ library for elastic search and configure it to connect to elastic
 if there is a network outage or data spikes this shouldn't mess up data collection.
 It starts collecting logs from all the applications: it can be your own applications
 third-party applications. All of it now these logs that fluentd collected will be of different forms  like json format, nginx format some custom format, and so on so fluentd will process them and reformat them into a uniform way. After fluentd processes them, in most cases the goal is to nicely visualize  and analyse them.
+---
+
+
 ![](https://camo.githubusercontent.com/9386aa8e7cb67334bf3239e648abb3c034a521ba8cc48a34911645da5fd903d4/68747470733a2f2f7777772e666c75656e74642e6f72672f696d616765732f666c75656e74642d6172636869746563747572652e706e67)
 
 ---

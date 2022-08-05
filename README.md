@@ -76,9 +76,11 @@ finally you have
 the output where should the logs go
 and for each such output target
 there is a plugin like elasticsearch, mongodb
+ 
+ 
 
 ```
-
+helm repo add fluent https://fluent.github.io/helm-charts
 ```
 
  

@@ -101,7 +101,9 @@ helm repo add fluent https://fluent.github.io/helm-charts
 chmod +x install.sh
 ./install.sh v0.21.2
  ```
-*  Keycloak  Keycloak, an open source software to provide authentication services.
+*  Keycloak  Keycloak, an open source software to provide authentication services.  The goal for 
+this component is to provide a common single sign-on feature for all the platform 
+components
  Good guide how to make everything work is under the link:
  [Keycloak](https://www.keycloak.org/getting-started/getting-started-kube)
 ### Status

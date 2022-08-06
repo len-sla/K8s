@@ -86,10 +86,21 @@ helm repo add fluent https://fluent.github.io/helm-charts
  ## 3.  Creating Data science environment based on K8s
  
  * Locally with the use of Hyper-V VM on Windows. Good guide how to do it is under this address
- https://www.nakivo.com/blog/run-linux-hyper-v/
- There installation of [minikube](https://github.com/kubernetes/minikube) 
+ https://www.nakivo.com/blog/run-linux-hyper-v <br/>
+ * installation of [minikube](https://github.com/kubernetes/minikube)  <br/>
  
+ Once minikube environment is ready we could start installing required parts
+ OLM (Operator Lifecycle Manager)
+ Operator Framework, an open source toolkit to manage Kubernetes native applications, called Operators, in an effective, automated, and scalable way
  
+ https://github.com/operator-framework/operator-lifecycle-manager/releases/
+ me of writing this info latest release was as follows :<br/>
+ For the ti
+ ```
+ curl -L https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.21.2/install.sh -o install.sh
+chmod +x install.sh
+./install.sh v0.21.2
+ ```
  
 ### Status
 Project is: _in progress_ 

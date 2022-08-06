@@ -89,19 +89,21 @@ helm repo add fluent https://fluent.github.io/helm-charts
  https://www.nakivo.com/blog/run-linux-hyper-v <br/>
  * installation of [minikube](https://github.com/kubernetes/minikube)  <br/>
  
- Once minikube environment is ready we could start installing required parts
- OLM (Operator Lifecycle Manager)
- Operator Framework, an open source toolkit to manage Kubernetes native applications, called Operators, in an effective, automated, and scalable way
+ Once minikube environment is ready we could start installing required parts: <br/>
+ * OLM (Operator Lifecycle Manager)
+  Operator Framework, an open source toolkit to manage Kubernetes native applications, called Operators, in an effective, automated, and scalable way
  
- https://github.com/operator-framework/operator-lifecycle-manager/releases/
- me of writing this info latest release was as follows :<br/>
- For the ti
+  https://github.com/operator-framework/operator-lifecycle-manager/releases/ <br/>
+  For the time of writing this info latest release was as follows :<br/>
+ 
  ```
  curl -L https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.21.2/install.sh -o install.sh
 chmod +x install.sh
 ./install.sh v0.21.2
  ```
- 
+*  Keycloak  Keycloak, an open source software to provide authentication services.
+ Good guide how to make everything work is under the link:
+ [Keycloak](https://www.keycloak.org/getting-started/getting-started-kube)
 ### Status
 Project is: _in progress_ 
 

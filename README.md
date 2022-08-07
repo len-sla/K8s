@@ -106,7 +106,9 @@ this component is to provide a common single sign-on feature for all the platfor
 components
  Good guide how to make everything work is under the link:
  [Keycloak](https://www.keycloak.org/getting-started/getting-started-kube) <br/>
- To make work more efficient importing realm to keycloak will be used:
+ ---
+ 
+ To make work more efficient importing realm to keycloak will be used:<br/>
  https://www.keycloak.org/operator/realm-import
  
 ### Status

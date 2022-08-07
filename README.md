@@ -111,6 +111,7 @@ components
  To make work more efficient importing realm to keycloak will be used:<br/>
  https://www.keycloak.org/operator/realm-import
  
+ well maybe importing directly from admin console realmsettings/Action( right)corner/ Partial import and giving path to json file with settings
 ### Status
 Project is: _in progress_ 
 

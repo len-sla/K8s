@@ -105,7 +105,9 @@ chmod +x install.sh
 this component is to provide a common single sign-on feature for all the platform 
 components
  Good guide how to make everything work is under the link:
- [Keycloak](https://www.keycloak.org/getting-started/getting-started-kube)
+ [Keycloak](https://www.keycloak.org/getting-started/getting-started-kube) <br/>
+ To make work more efficient importing realm to keycloak will be used
+ 
 ### Status
 Project is: _in progress_ 
 

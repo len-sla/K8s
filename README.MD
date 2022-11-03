@@ -96,7 +96,7 @@ Install kubectl
  ```
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
  ```
- Once in place lets creat ecluster with threeworjer nodes and one control plabe of course any other configuration with the use of command line is 
+ Once in place lets create cluster with three worker nodes and one control plane of course any other configuration with the use of command line is 
  possible 
 ```
 talosctl cluster create --wait --workers 3

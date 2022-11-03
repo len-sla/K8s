@@ -123,6 +123,11 @@ There is even text dasboard to have overview of k8s talos cluster
 talosctl -n  10.5.0.2,10.5.0.3,10.5.0.4,10.5.0.5 dashboard
 kubectl get nodes -o wide
 ```
+
+Finally, we just need to specify which nodes you want to communicate with using talosctl. Talosctl can operate on one or all the nodes in the cluster – this makes cluster wide commands much easier.
+```
+talosctl config nodes 10.5.0.2 10.5.0.3 10.5.0.4 10.5.0.5
+```
 at the end 
 ```
 talosctl cluster destroy

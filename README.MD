@@ -128,7 +128,11 @@ Finally, we just need to specify which nodes you want to communicate with using 
 ```
 talosctl config nodes 10.5.0.2 10.5.0.3 10.5.0.4 10.5.0.5
 ```
-there is buildin dashboard 
+there is buildin text dashboard 
+```
+talosctl -n  10.5.0.2,10.5.0.3,10.5.0.4,10.5.0.5 dashboard
+```
+
 ![](dasboard-talos.JPG)
 
 at the end 

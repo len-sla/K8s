@@ -116,6 +116,13 @@ NAME                      TYPE           IP         CPU    RAM      DISK
 /talos-default-worker-1   join           10.5.0.3   2.00   2.1 GB   -
 /talos-default-worker-2   join           10.5.0.4   2.00   2.1 GB   -
 /talos-default-worker-3   join           10.5.0.5   2.00   2.1 GB   -
+
+NAME                     STATUS   ROLES                  AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE         KERNEL-VERSION      CONTAINER-RUNTIME
+talos-default-master-1   Ready    control-plane,master   17m   v1.20.1   10.5.0.2      <none>        Talos (v0.8.1)   5.13.0-40-generic   containerd://1.4.3
+talos-default-worker-1   Ready    <none>                 17m   v1.20.1   10.5.0.3      <none>        Talos (v0.8.1)   5.13.0-40-generic   containerd://1.4.3
+talos-default-worker-2   Ready    <none>                 17m   v1.20.1   10.5.0.4      <none>        Talos (v0.8.1)   5.13.0-40-generic   containerd://1.4.3
+talos-default-worker-3   Ready    <none>                 17m   v1.20.1   10.5.0.5      <none>        Talos (v0.8.1)   5.13.0-40-generic   containerd://1.4.3
+
 ```
 There is even text dasboard to have overview of k8s talos cluster 
 

@@ -1,5 +1,5 @@
 ## 1 K8s
-> <p>Palying  with k8s is a next step after docker and docker swarm.<br>
+> <p>Playing  with k8s is a next step after docker and docker swarm.<br>
 There are plenty of resources starting from local minikube or KIND  , or in the cloud like AWS GCP
 K9s is a terminal based UI to interact with your Kubernetes clusters.
 
@@ -77,7 +77,7 @@ there is a plugin like elasticsearch, mongodb
 ## Setup Kubernetes cluster locally/in the cloud  in minutes using Talos
 [Talos](https://www.talos.dev/v1.2/) is a container optimized Linux distro; a reimagining of Linux for distributed systems such as Kubernetes. Designed to be as minimal as possible while still maintaining practicality.
 
-There are plenty of diffrent options installing one localluy or in the cloud 
+There are plenty of diffrent options installing one locally or in the cloud 
 I used one installed locally on Ubuntu 20  
 
 Steps:

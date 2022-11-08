@@ -85,8 +85,9 @@ Steps:
 
 ```
 wget https://github.com/talos-systems/talos/releases/download/v0.8.1/talosctl-linux-amd64
-```
+
 sudo install talosctl-linux-amd64 /usr/local/bin/talosctl 
+```
 2. We also need [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) easiest option with curl
  ```
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"

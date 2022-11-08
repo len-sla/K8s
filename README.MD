@@ -123,7 +123,12 @@ talos-default-master-1   Ready    control-plane,master   17m   v1.20.1   10.5.0.
 talos-default-worker-1   Ready    <none>                 17m   v1.20.1   10.5.0.3      <none>        Talos (v0.8.1)   5.13.0-40-generic   containerd://1.4.3
 talos-default-worker-2   Ready    <none>                 17m   v1.20.1   10.5.0.4      <none>        Talos (v0.8.1)   5.13.0-40-generic   containerd://1.4.3
 talos-default-worker-3   Ready    <none>                 17m   v1.20.1   10.5.0.5      <none>        Talos (v0.8.1)   5.13.0-40-generic   containerd://1.4.3
-
+```
+ When you could/want more memory per worker node/control plabe then:
+ 
+ 
+```
+ talosctl cluster create --wait --workers 3 --memory 6144
 ```
 There is even text dasboard to have overview of k8s talos cluster 
 

@@ -23,39 +23,45 @@ K9s continually watches Kubernetes for changes and offers subsequent commands to
 
 
 
-## 2.  Collecting an d presenting logs in K8s environment.
+## 2.  Collecting and presenting logs in K8s environment( fluentd  installed as DeamonSet, Elasticsearch to visualise).
 
 Once in the cluster there are couple of applications like database,python aplications,  message broker crosschecking all of them especially in real time could a challenge simple kubectl describe pod etc will not be enough. It is even worse if the one of them is not working then logs are essetial for debugging.
 
-Now the question is how do application log this data?
+
+Now the question is how do application log this data?<b>
+<br/>
 There are few options:
 
-*applications right to a file
+* applications right to a file
 however as you can imagine it's difficult to analyze
 loads of data in raw log files
 
-*another option could be to log directly
+* another option could be to log directly
 into a log database like elastic for example
 to then have a visualization of this
 data however in this case
 each application developer must add a
 library for elastic search and configure it to connect to elastic 
 
-third-party solution Fluentd does that reliably meaning
+* third-party solution [Fluentd](https://github.com/fluent/fluentd) does that reliably meaning
 if there is a network outage or data spikes this shouldn't mess up data collection.
 It starts collecting logs from all the applications: it can be your own applications
 third-party applications. All of it now these logs that fluentd collected will be of different forms  like json format, nginx format some custom format, and so on so fluentd will process them and reformat them into a uniform way. After fluentd processes them, in most cases the goal is to nicely visualize  and analyse them.
+---
 
 
-Fluentd can send these logs to any destination you want elasticsearch, mongodb, s3, kafka
-maybe  you want your python application logs to go to mongodb storage for data analysis and all other application logs to go to elasticsearch
+![](https://camo.githubusercontent.com/9386aa8e7cb67334bf3239e648abb3c034a521ba8cc48a34911645da5fd903d4/68747470733a2f2f7777772e666c75656e74642e6f72672f696d616765732f666c75656e74642d6172636869746563747572652e706e67)
+
+---
+ 
+Fluentd can send these logs to any destination you want elasticsearch, mongodb, s3, kafka.
+Maybe  you want your python application logs to go to mongodb storage for data analysis and all other application logs to go to elasticsearch.
 You can actually very easily configure that routing in fluentd.
 
-You could  install fluentd in kubernetes as a DaemonSet
-DaemonSet is a component that runs on each kubernetes node. 
+ ===
+You could  install fluentd in kubernetes as a DaemonSet(_DaemonSet is a component that runs on each kubernetes node_). 
 
-You can configure fluenty using a fluentd configuration file.
-it's very powerful in terms of processing and reformatting your data
+You can configure fluenty using a fluentd configuration file. It's very powerful in terms of processing and reformatting your data
 fluentd has tons of plugins for different use cases
  you can define the data
 sources these are all the applications
@@ -69,12 +75,48 @@ finally you have
 the output where should the logs go
 and for each such output target
 there is a plugin like elasticsearch, mongodb
+ 
+ 
 
+```
+helm repo add fluent https://fluent.github.io/helm-charts
+```
+
+ ## 3.  Creating Data science environment based on K8s
+ 
+ * Locally with the use of Hyper-V VM on Windows. Good guide how to do it is under this address
+ https://www.nakivo.com/blog/run-linux-hyper-v <br/>
+ * installation of [minikube](https://github.com/kubernetes/minikube)  <br/>
+ 
+ Once minikube environment is ready we could start installing required parts: <br/>
+ * OLM (Operator Lifecycle Manager)
+  Operator Framework, an open source toolkit to manage Kubernetes native applications, called Operators, in an effective, automated, and scalable way
+ 
+  https://github.com/operator-framework/operator-lifecycle-manager/releases/ <br/>
+  For the time of writing this info latest release was as follows :<br/>
+ 
+ ```
+ curl -L https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.21.2/install.sh -o install.sh
+chmod +x install.sh
+./install.sh v0.21.2
+ ```
+*  Keycloak  Keycloak, an open source software to provide authentication services.  The goal for 
+this component is to provide a common single sign-on feature for all the platform 
+components
+ Good guide how to make everything work is under the link:
+ [Keycloak](https://www.keycloak.org/getting-started/getting-started-kube) <br/>
+ ---
+ 
+ To make work more efficient importing realm to keycloak will be used:<br/>
+ https://www.keycloak.org/operator/realm-import
+ 
+ Importing directly from admin console realmsettings/Action( right)corner/ Partial import and giving path to json file with settings is good way 
+ yo recreate configuration.
 
 ```
 
 ```
-## Setup Kubernetes cluster locally/in the cloud  in minutes using Talos
+## 3 Setup Kubernetes cluster locally/in the cloud  in minutes using Talos
 [Talos](https://www.talos.dev/v1.2/) is a container optimized Linux distro; a reimagining of Linux for distributed systems such as Kubernetes. Designed to be as minimal as possible while still maintaining practicality.
 
 There are plenty of diffrent options installing one locally or in the cloud 

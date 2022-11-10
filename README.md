@@ -147,6 +147,45 @@ Bash or ZSH shells
     and restart your shell.
 
     Run kubectl krew to check the installation.
+ 
+ Quickstart
+
+Krew helps you discover and install kubectl plugins on your machine.
+
+You can install and use a wide variety of kubectl plugins to enhance your Kubernetes experience.
+
+Let’s get started:
+
+    Install and set up Krew on your machine.
+
+    Download the plugin list:
+
+kubectl krew update
+
+Discover plugins available on Krew:
+
+kubectl krew search
+NAME                            DESCRIPTION                                         INSTALLED
+access-matrix                   Show an RBAC access matrix for server resources     no
+advise-psp                      Suggests PodSecurityPolicies for cluster.           no
+auth-proxy                      Authentication proxy to a pod or service            no
+[...]
+
+Choose a plugin from the list and install it:
+
+kubectl krew install access-matrix
+
+Use the installed plugin:
+
+kubectl access-matrix
+
+Keep your plugins up-to-date:
+
+kubectl krew upgrade
+
+Uninstall a plugin you no longer use:
+
+kubectl krew uninstall access-matrix
 
 ### Status
 Project is: _in progress_ 

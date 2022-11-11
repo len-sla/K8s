@@ -114,9 +114,11 @@ components
  Importing directly from admin console realmsettings/Action( right)corner/ Partial import and giving path to json file with settings is good way 
  yo recreate configuration.
  
- ## 4 Installing krew for kubectl ( extension manager)
+ ## 4 Installing krew for kubectl 
 
-Krew itself is a kubectl plugin that is installed and updated via Krew (yes, Krew self-hosts).
+Krew helps you discover and install kubectl plugins on your machine.
+
+You can install and use a wide variety of kubectl plugins to enhance your Kubernetes experience.
 
 Linux
 Bash or ZSH shells
@@ -152,12 +154,13 @@ Let’s get started:
     Install and set up Krew on your machine.
 
     Download the plugin list:
-
+ ```
 kubectl krew update
-
+ ```
 Discover plugins available on Krew:
-
-kubectl krew search
+ ```
+kubectl krew search 
+ ```
 NAME                            DESCRIPTION                                         INSTALLED
 access-matrix                   Show an RBAC access matrix for server resources     no
 advise-psp                      Suggests PodSecurityPolicies for cluster.           no
@@ -165,21 +168,21 @@ auth-proxy                      Authentication proxy to a pod or service        
 [...]
 
 Choose a plugin from the list and install it:
-
+ ```
 kubectl krew install access-matrix
-
+ ```
 Use the installed plugin:
 
-kubectl access-matrix
+
 
 Keep your plugins up-to-date:
-
+ ```
 kubectl krew upgrade
-
+ ```
 Uninstall a plugin you no longer use:
-
+ ```
 kubectl krew uninstall access-matrix
-
+ ```
 ### Status
 Project is: _in progress_ 
 

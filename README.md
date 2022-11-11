@@ -135,30 +135,25 @@ Bash or ZSH shells. Make sure that git is installed.  Run this command to downlo
       ./"${KREW}" install krew
     )
  ```
-    Add the $HOME/.krew/bin directory to your PATH environment variable. To do this, update your .bashrc or .zshrc file and append the following line:
+ 
+ Add the $HOME/.krew/bin directory to your PATH environment variable. To do this, update your .bashrc or .zshrc file and append the following line:
+ 
  ```
     export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
  ```
-    and restart your shell.
-
-    Run kubectl krew to check the installation.
+ and restart your shell.  Run kubectl krew to check the installation update when necessary.
  
- Quickstart
 
-
-
-Let’s get started:
-
-    Install and set up Krew on your machine.
-
-    Download the plugin list:
  ```
 kubectl krew update
- ```
+```
+ 
 Discover plugins available on Krew:
+
  ```
 kubectl krew search 
- ```
+```
+ 
 NAME                            DESCRIPTION                                         INSTALLED
 access-matrix                   Show an RBAC access matrix for server resources     no
 advise-psp                      Suggests PodSecurityPolicies for cluster.           no
@@ -166,22 +161,24 @@ auth-proxy                      Authentication proxy to a pod or service        
 [...]
 
 Choose a plugin from the list and install it:
- ```
+ 
+```
 kubectl krew install access-matrix
- ```
-Use the installed plugin:
-
-
+```
 
 Keep your plugins up-to-date:
- ```
+ 
+```
 kubectl krew upgrade
- ```
+```
+ 
 Uninstall a plugin you no longer use:
+
  ```
 kubectl krew uninstall access-matrix
- ```
-### Status
+```
+
+ ### Status
 Project is: _in progress_ 
 
 

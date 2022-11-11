@@ -114,22 +114,17 @@ components
  Importing directly from admin console realmsettings/Action( right)corner/ Partial import and giving path to json file with settings is good way 
  yo recreate configuration.
  
- Installing
+ ## 4 Installing krew for kubectl ( extension manager)
 
 Krew itself is a kubectl plugin that is installed and updated via Krew (yes, Krew self-hosts).
 
-    ?? Warning: krew is only compatible with kubectl v1.12 or later.
-
-    macOS/Linux: bash/zsh, fish
-    Windows
-
-macOS/Linux
+Linux
 Bash or ZSH shells
 
     Make sure that git is installed.
 
     Run this command to download and install krew:
-
+ ```
     (
       set -x; cd "$(mktemp -d)" &&
       OS="$(uname | tr '[:upper:]' '[:lower:]')" &&
@@ -139,20 +134,18 @@ Bash or ZSH shells
       tar zxvf "${KREW}.tar.gz" &&
       ./"${KREW}" install krew
     )
-
+ ```
     Add the $HOME/.krew/bin directory to your PATH environment variable. To do this, update your .bashrc or .zshrc file and append the following line:
-
+ ```
     export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
+ ```
     and restart your shell.
 
     Run kubectl krew to check the installation.
  
  Quickstart
 
-Krew helps you discover and install kubectl plugins on your machine.
 
-You can install and use a wide variety of kubectl plugins to enhance your Kubernetes experience.
 
 Let’s get started:
 

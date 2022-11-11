@@ -121,11 +121,9 @@ Krew helps you discover and install kubectl plugins on your machine.
 You can install and use a wide variety of kubectl plugins to enhance your Kubernetes experience.
 
 Linux
-Bash or ZSH shells
-
-    Make sure that git is installed.
-
-    Run this command to download and install krew:
+Bash or ZSH shells. Make sure that git is installed.  Run this command to download and install krew:
+ 
+ 
  ```
     (
       set -x; cd "$(mktemp -d)" &&

@@ -18,7 +18,7 @@ https://github.com/techno-tim/k3s-ansible
 
 
 
-__two years ago ie in 2022 I was going more standard  way for local lab __ :
+_two years ago ie in 2022 I was going more standard  way for local lab_ :
 
 ---
 

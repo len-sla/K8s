@@ -10,7 +10,7 @@ All this could be just bla bla, <br> I was also sceptiacal. Though after followi
 ---
 ![](k3s.jpg)
 
-See yourself
+See  and use yourself <br>
 https://technotim.live/posts/k3s-etcd-ansible/   <br>
 https://github.com/techno-tim/k3s-ansible
 

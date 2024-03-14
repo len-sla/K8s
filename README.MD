@@ -1,3 +1,8 @@
+
+two years ago ie in 2022 I was testing following subjects :
+
+---
+
 ## 1 K8s
 > <p>Playing  with k8s is a next step after docker and docker swarm.<br>
 There are plenty of resources starting from local minikube or KIND  , or in the cloud like AWS GCP

@@ -1,15 +1,21 @@
 
 ## Fully Automated K3S etcd High Availability Install
+
+
 Proxmox is an open-source virtualization platform that combines KVM virtualization, container-based virtualization, and software-defined storage and networking, providing a comprehensive solution for managing virtualized environments. It offers a web-based management interface and supports various virtualization technologies, making it suitable for both small-scale deployments and enterprise environments.
 
 Using Ansible, it's possible to automate the creation of a fully functional HA (High Availability) K3s cluster based on previously created VMs with cloud-init Ubuntu Server images. Ansible playbooks can be crafted to provision VMs on Proxmox, ensuring they have the necessary resources and configurations specified for a K3s cluster. Subsequently, Ansible can orchestrate the installation and configuration of K3s on these VMs, setting up etcd HA, master and worker nodes, and ensuring proper networking and security configurations. By leveraging Ansible's automation capabilities, the entire process can be streamlined, allowing for rapid and consistent deployment of HA K3s clusters in Proxmox environments, reducing manual effort and minimizing the potential for configuration errors.
 All this could be just bla bla, I was also sceptiacal. Thogh after following what TIm did I was pleasantly surprised how comfortable and automated whole process could be instead of struggling.
+
+---
 See yourself
 https://technotim.live/posts/k3s-etcd-ansible/
 https://github.com/techno-tim/k3s-ansible
 ---
 
-two years ago ie in 2022 I was testing following subjects :
+
+
+__two years ago ie in 2022 I was going more manual way__ :
 
 ---
 

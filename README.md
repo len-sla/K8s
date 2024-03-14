@@ -1,5 +1,10 @@
 ## 1 K8s
-> <p>Palying  with k8s is a next step after docker and docker swarm.<br>
+> <p>Playing  with k8s is a next step after docker and docker swarm.<br>
+
+
+
+What follows this line was written 2 years ago ie in 2022
+---
 There are plenty of resources starting from local minikube or KIND  , or in the cloud like AWS GCP
 K9s is a terminal based UI to interact with your Kubernetes clusters.
 

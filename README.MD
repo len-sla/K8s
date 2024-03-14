@@ -8,9 +8,11 @@ Using Ansible, it's possible to automate the creation of a fully functional HA (
 All this could be just bla bla, I was also sceptiacal. Thogh after following what TIm did I was pleasantly surprised how comfortable and automated whole process could be instead of struggling.
 
 ---
+![](k3s.JPG)
 See yourself
-https://technotim.live/posts/k3s-etcd-ansible/
+https://technotim.live/posts/k3s-etcd-ansible/   <br>
 https://github.com/techno-tim/k3s-ansible
+
 ---
 
 
